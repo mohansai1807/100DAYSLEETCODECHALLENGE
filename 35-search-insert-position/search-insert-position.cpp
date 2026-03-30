@@ -4,7 +4,7 @@ public:
         int n = nums.size();
         int left = 0;
         int right = n-1;
-        int ans = INT_MAX;
+        int ans = n;
         while(left<=right){
             int mid = (left+right)/2;
             if(nums[mid] == target){
@@ -15,15 +15,10 @@ public:
 
             }
             else{
+                ans = mid;
                 right = mid - 1;
             }
         }
-        for(int i=0;i<n;i++){
-            if(nums[i] > target){
-                return i;
-            }
-        }
-        return n;
-
-    }
+        return ans;
+    }   
 };
