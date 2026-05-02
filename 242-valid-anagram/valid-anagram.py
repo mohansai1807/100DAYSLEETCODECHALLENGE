@@ -2,6 +2,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         s = s.replace(" ","").lower()
         t = t.replace(" ","").lower()
+        
         if(len(s)!=len(t)):
             return False
 
